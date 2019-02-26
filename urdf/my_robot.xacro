@@ -144,6 +144,7 @@
           iyy="1e-6" iyz="0"
           izz="1e-6"
       />
+			<box_inertia m="0.1" x="0.05" y="0.05" z="0.05"/>
     </inertial>
 
     <collision name='collision'>
@@ -162,5 +163,11 @@
 	
 	</link>
 
+  <joint type="fixed" name="camera_joint">
+    <origin xyz="0.2 0 0" rpy="0 0 0"/>
+    <child link="camera"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+  </joint>
 </robot>
 
