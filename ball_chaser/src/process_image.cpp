@@ -36,7 +36,7 @@ void process_image_callback(const sensor_msgs::Image img)
     int right_section  = static_cast<int>(2 * img.step / 3);
 
     // Stop and wait
-    if (pixel_position < 0) {
+    if (pixel_position < 0)
       drive_robot(0.0, 0.0);
 
     // Go left
