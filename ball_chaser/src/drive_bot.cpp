@@ -21,7 +21,7 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser:
     //ros::Duration(3).sleep();
 
 		// Return a response message
-    res.msg_feedback = "Velocities set - linear: " + std::to_string(req.linear_x) + " , angular: " + std::to_string(req.angular_z]);
+    res.msg_feedback = "Velocities set - linear: " + std::to_string(req.linear_x) + " , angular: " + std::to_string(req.angular_z);
     ROS_INFO_STREAM(res.msg_feedback);
 
     return true;
